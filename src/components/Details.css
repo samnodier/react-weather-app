@@ -1,0 +1,22 @@
+.Details {
+	display: flex;
+	align-self: flex-end;
+	align-items: center;
+	justify-content: space-around;
+	padding-bottom: 40px;
+	padding-right: 20px;
+}
+
+.Details * {
+	padding-right: 0;
+	margin-right: 0;
+}
+
+.Details h1 {
+	font-weight: 400;
+	font-size: 4rem;
+}
+
+.Details__city {
+	font-size: 2rem;
+}

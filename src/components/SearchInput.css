@@ -1,0 +1,32 @@
+.SearchInput__form {
+	margin-bottom: 50px;
+	display: grid;
+	grid-template-columns: 4fr 1fr;
+	grid-gap: 5px;
+}
+
+.SearchInput__form-input {
+	margin-right: 5px;
+	width: 100%;
+	height: 50px;
+	background: rgba(0,0,0,.1);
+	border: none;
+	border-bottom: 2px solid #FFF;
+	outline: none;
+	color: #FFF;
+	font-family: Poppins, sans-serif;
+	padding-left: 5px;
+	font-size: 16px;
+}
+
+.SearchInput__form-btn {
+	width: 100%;
+	height: 50px;
+	background: #fd4e39;
+	border: none;
+	color: white;
+	cursor: pointer;
+	outline: none;
+	font-size: 15px;
+	padding: 0 5px;
+}

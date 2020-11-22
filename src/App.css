@@ -1,38 +1,74 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+body {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+#root {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Create a blur background */
+#background {
+  background: no-repeat center center fixed;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  display: block;
+  position: fixed;
+  top: -5px;
+  right: -5px;
+  bottom: -5px;
+  left: -5px;
+  filter: blur(10px);
+  -webkit-filter: blur(7px);
+  -moz-filter: blur(7px);
+  -o-filter: blur(7px);
+  -ms-filter: blur(7px);
+  margin: -5px;
+  z-index: 0;
+}
+
+/* Add a dark overlay to the root*/
+#background::after {
+  content: '';
+  background: rgba(0,0,0,.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.App {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.App__window {
+  background: #972825 url('./images/background.jpg') no-repeat center center / cover;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  align-items: center;
+  justify-content: center;
+  width: 750px;
+  padding-left: 20px;
+  z-index: 3;
+}
+
+.App__details {
+  display: flex;
 }
